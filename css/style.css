@@ -208,6 +208,16 @@ svg {
     transition: right .4s;
 
   }
+  .about__blob{
+    align-items: center;
+    justify-content: center;
+    padding-left: 2rem;
+  }
+
+  .about__container{
+    align-items: center;
+    justify-content: center;
+  }
   
 }
 
@@ -691,7 +701,7 @@ svg {
 }
 
 /* For medium devices */
-@media screen and(min-width:576px) {
+@media screen and(min-width:330px){
   .home__container,
   .about__container,
   .skills__container,
@@ -700,6 +710,10 @@ svg {
   .contact__container{
     grid-template-columns: 360px;
     justify-content: center;
+  }
+
+  .skills__content{
+    column-gap: 4rem;
   }
   
 }
@@ -713,7 +727,6 @@ svg {
     .about__container,
     .skills__container{
       grid-template-columns: repeat(2, 1fr);
-  
       align-items: center;
     }
 
@@ -864,7 +877,7 @@ svg {
     padding-block: 3.5rem 2rem;
    }
 
-   
+
 
    .projects__container{
     grid-template-columns: repeat(3, 352px);
