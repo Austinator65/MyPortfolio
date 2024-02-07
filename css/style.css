@@ -435,8 +435,9 @@ svg {
   margin-bottom: 2rem;
 }
 
-.about__blob,
-.about__blobs{
+.about__blob{
+  align-items: center;
+  justify-items: center;
   width: 320px;
   filter: drop-shadow(0 12px 12px hsla(var(--hue), 100%, 40%, .4));
 }
@@ -466,6 +467,8 @@ opacity: 0;
 .skills__container{
   padding-bottom: 2rem;
   row-gap: 3.5rem;
+  justify-content: center;
+  align-items: center;
 }
 
 .skills__data{
@@ -486,6 +489,7 @@ opacity: 0;
   column-gap: 4rem;
   justify-content: center;
   align-items: baseline;
+  padding-left: 4rem;
 }
 
 .skills__group{
@@ -759,6 +763,7 @@ opacity: 0;
 
   .skills__content{
     grid-template-columns: max-content;
+    margin-right: 5px;
     row-gap: 1rem;
   }
   
@@ -780,13 +785,17 @@ opacity: 0;
     justify-content: center;
   }
 
-  .skills__content{
-    column-gap: 4rem;
+  .skills__content,
+  .skills__container{
+    column-gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
   }
   
 }
 
-@media screen and(min-width: 768px){
+@media screen and(min-width: 767px){
     .nav__menu{
       width: 10%;
     }
@@ -796,6 +805,7 @@ opacity: 0;
     .skills__container{
       grid-template-columns: repeat(2, 1fr);
       align-items: center;
+      justify-content: center ;
     }
 
     .home__data,
@@ -809,6 +819,18 @@ opacity: 0;
       justify-content: initial;
     }
 
+    .about__image,
+    .about__description,
+    .about__data,
+    .about__container{
+      align-self: center;
+      justify-content: center;
+      grid-template-columns: repeat(2, 1fr);
+      align-items: center;
+      grid-template-columns: 550px 460px;
+     
+    }
+
     .home__blob,
     .about__blob{
       width: 400px;
@@ -817,7 +839,9 @@ opacity: 0;
     .about_data{
       order:1;
     }
-
+.skills__data{
+  box-sizing: border-box;
+}
     .services__container,
     .projects__container{
       grid-template-columns: repeat(2, 352px);
@@ -843,7 +867,7 @@ opacity: 0;
 
 
  .about__container{
-  grid-template-columns: 550px 460px;
+  grid-template-columns: 530px 400px;
   padding-bottom: 1rem;
  }
 
@@ -920,6 +944,7 @@ opacity: 0;
 
    .skills__description{
     margin-bottom: 3rem;
+    padding: 4;
    }
 
    .skills__content{
