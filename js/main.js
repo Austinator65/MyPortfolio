@@ -110,7 +110,7 @@ window.addEventListener('scroll', scrollActive);
 const sr= ScrollReveal({
   origin: 'top',
   distance: '60px',
-  duration: 2500,
+  duration: 2700,
   delay: 50,
   //reset: true,
 })
@@ -120,6 +120,3 @@ sr.reveal('.home__image', {origin: 'bottom'})
 sr.reveal('.about__data, .skills__data', {origin: 'left'})
 sr.reveal('.about__image, .skills__content', {origin: 'right'})
 sr.reveal('.service__card, .projects__card ', {interval:100})
-
-
-

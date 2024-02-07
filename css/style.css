@@ -179,6 +179,7 @@ svg {
 .nav__logo{
   color: var(--title-color);
   font-weight: var(--font-medium);
+  font-size: larger;
 }
 
 .nav__logo span{
@@ -205,7 +206,7 @@ svg {
     height: 100%;
     padding: 4.5rem 0 0 3rem;
     backdrop-filter: blur(24px);
-    -webkit-backdrop-filter: blur(24px); 
+    -webkit-backdrop-filter: blur(24px);
     transition: right .4s;
 
   }
@@ -214,6 +215,8 @@ svg {
     justify-content: center;
     padding-left: 2rem;
   }
+
+
 
   .about__container{
     align-items: center;
@@ -292,12 +295,64 @@ svg {
 
 .home__data{
   text-align: center;
-
 }
 
 .home__subtitle,
 .home__education{
   font-size: var(--bigger-font-size);
+}
+
+.animated{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 0;
+  top: 0;
+}
+
+.home__education::before{
+  content: "Web Developer";
+  color: var(--title-color);
+  animation: words 20s infinite;
+}
+
+.home__education::after{
+  content: "";
+  position: absolute;
+  width: calc(100% + 8px);
+  height: 100%;
+  background-color: var(--body-color);
+  right : -2px;
+  animation: typing 20s steps(18) infinite;
+}
+
+
+@keyframes words {
+  0%,20%{
+      content: "Web Developer";
+  }
+  21%,40%{
+      content: "App Developer";
+  }
+  41%,60%{
+      content: "Software Dev";
+  }
+  61%,80%{
+      content: "Musician";
+  }
+  81%, 100%{
+    content: "Pentester";
+  }
+}
+
+@keyframes typing {
+  10%,15%,30%,35%,50%,55%,70%,75%,90%,95%{
+      width: 0;
+  }
+  5%,20%,25%,40%,45%,60%,65%,80%,85%{
+      width: calc(100% + 8px);
+  }
 }
 
 .home__subtitle span,
@@ -380,9 +435,20 @@ svg {
   margin-bottom: 2rem;
 }
 
-.about__blob{
+.about__blob,
+.about__blobs{
   width: 320px;
   filter: drop-shadow(0 12px 12px hsla(var(--hue), 100%, 40%, .4));
+}
+
+
+.about__blob{
+  transition: opacity 1s ease-in-out;
+  cursor: pointer;
+}
+
+.about__blob:hover{
+opacity: 0;
 }
 
 .about__blob path{
@@ -673,11 +739,11 @@ svg {
   font-size: 1.25rem;
   box-shadow: 0 4px 12px hsla(228, 15%, 8%, .4);
   z-index: var(--z-tooltip);
-  transition: transform .8s;
+  transition: transform 4s;
 }
 
 .scrollup:hover{
-  transform: translateY(-.25rem);
+  transform: translateY(-1rem);
 }
 
 .show-scroll{
