@@ -425,10 +425,13 @@ svg {
 /*=============== ABOUT ===============*/
 .about__container{
   row-gap: 2.5rem;
+  justify-content: center;
+  align-items: center;
 }
 
 .about__data{
   text-align: center;
+  justify-content: center;
 }
 
 .about__description{
@@ -436,8 +439,8 @@ svg {
 }
 
 .about__blob{
-  align-items: center;
-  justify-items: center;
+  display: flex;
+  padding-left: 1px;
   width: 320px;
   filter: drop-shadow(0 12px 12px hsla(var(--hue), 100%, 40%, .4));
 }
@@ -471,11 +474,14 @@ opacity: 0;
 
 .skills__data{
   text-align: center;
+  justify-content: center;
 }
 
 .skills__description{
   margin-bottom: 2rem;
   flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
 
 .skills__content,
@@ -485,7 +491,7 @@ opacity: 0;
 }
 
 .skills__content{
-  grid-template-columns: repeat(2, max-content);
+  grid-template-columns: repeat(2, min-content);
   column-gap: 4rem;
   justify-content: center;
   align-items: baseline;
@@ -762,7 +768,6 @@ opacity: 0;
   .container{
     margin-inline: 1rem;
   }
-
   .skills__content{
     grid-template-columns: max-content;
     row-gap: 1rem;
@@ -785,15 +790,9 @@ opacity: 0;
   .contact__container{
     grid-template-columns: 360px;
     justify-content: center;
-  }
-
-  .skills__content,
-  .skills__container{
-    column-gap: 2rem;
     align-items: center;
-    justify-content: center;
-    text-align: end;
   }
+  
   
 }
 
@@ -808,6 +807,7 @@ opacity: 0;
       grid-template-columns: repeat(2, 1fr);
       align-items: center;
       justify-content: center ;
+      flex-wrap: nowrap;
     }
 
     .home__data,
@@ -824,7 +824,8 @@ opacity: 0;
     .about__image,
     .about__description,
     .about__data,
-    .about__container{
+    .about__container,
+    .skills__description{
       align-self: center;
       justify-content: center;
       grid-template-columns: repeat(2, 1fr);
@@ -832,6 +833,7 @@ opacity: 0;
       grid-template-columns: 550px 460px;
      
     }
+   
 
     .home__blob,
     .about__blob{
