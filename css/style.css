@@ -467,8 +467,6 @@ opacity: 0;
 .skills__container{
   padding-bottom: 2rem;
   row-gap: 3.5rem;
-  justify-content: center;
-  align-items: center;
 }
 
 .skills__data{
@@ -477,11 +475,13 @@ opacity: 0;
 
 .skills__description{
   margin-bottom: 2rem;
+  flex-wrap: wrap;
 }
 
 .skills__content,
 .skills__group{
   display: grid;
+  flex-wrap: wrap;
 }
 
 .skills__content{
@@ -489,17 +489,19 @@ opacity: 0;
   column-gap: 4rem;
   justify-content: center;
   align-items: baseline;
-  padding-left: 4rem;
+  flex-wrap: wrap;
 }
 
 .skills__group{
   row-gap: 1rem;
   list-style: upper-roman;
+  flex-wrap: wrap;
 }
 
 .skills__item{
   font-weight: var(--font-medium);
   color: var(--title-color);
+  flex-wrap: wrap;
 }
 
 .skills__item::marker{
@@ -763,8 +765,8 @@ opacity: 0;
 
   .skills__content{
     grid-template-columns: max-content;
-    margin-right: 5px;
     row-gap: 1rem;
+    flex-wrap: wrap;
   }
   
   .services__card{
@@ -787,10 +789,10 @@ opacity: 0;
 
   .skills__content,
   .skills__container{
-    column-gap: 1rem;
+    column-gap: 2rem;
     align-items: center;
     justify-content: center;
-    box-sizing: border-box;
+    text-align: end;
   }
   
 }
@@ -839,9 +841,7 @@ opacity: 0;
     .about_data{
       order:1;
     }
-.skills__data{
-  box-sizing: border-box;
-}
+
     .services__container,
     .projects__container{
       grid-template-columns: repeat(2, 352px);
@@ -944,7 +944,6 @@ opacity: 0;
 
    .skills__description{
     margin-bottom: 3rem;
-    padding: 4;
    }
 
    .skills__content{
